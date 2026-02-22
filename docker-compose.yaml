@@ -1,0 +1,9 @@
+services:
+  database:
+    image: postgres:alpine3.22
+    container_name: postgres_db
+    environment:
+      POSTGRES_PASSWORD: a1mQ7_F0HT_1gIQI11jKi61LPiPjPTcc
+      POSTGRES_DB: p402db
+    ports:
+      - "5432:5432"

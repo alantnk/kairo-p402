@@ -5,7 +5,7 @@ Kairo centraliza metodologia e execução em um único ambiente digital.
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
+- [Database](#database)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -17,10 +17,14 @@ Kairo centraliza metodologia e execução em um único ambiente digital.
 4. Set up the database.
 
 ```shell
-git clone [https://github.com/your-username/your-repo.git](https://github.com/your-username/your-repo.git)
-cd your-repo
-python -m venv venv
-source venv/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
+```
+
+## Database
+
+Para desenvolvimento execute no shell:
+
+```shell
+docker-compose up -d
 ```
