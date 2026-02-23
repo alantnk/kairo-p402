@@ -1,5 +1,9 @@
 from django.shortcuts import render
+from django.views.decorators.vary import vary_on_headers
 
 
+@vary_on_headers("HX-Request")
 def index(request):
-    return render(request, "kanban_base.html")
+    if request.htmx:
+        return render(request, "kanban/htmx/partial.html")
+    return render(request, "kanban/base.html")

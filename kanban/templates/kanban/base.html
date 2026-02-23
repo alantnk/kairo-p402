@@ -23,9 +23,15 @@
 
 
 
-<div>
-  HTMX?
-</div>
+<button hx-get="."
+    hx-trigger="click"
+    hx-target="#parent-div"
+    hx-swap="outerHTML">
+    Click Me!
+</button>
+
+<div id="parent-div"></div>
+
 </div>
 
 {% endblock content %}
