@@ -6,7 +6,7 @@ Kairo centraliza metodologia e execução em um único ambiente digital.
 
 - [Installation](#installation)
 - [Database](#database)
-- [Contributing](#contributing)
+- [Tailwind](#tailwind)
 - [License](#license)
 
 ## Installation
@@ -27,4 +27,12 @@ Para desenvolvimento execute no shell:
 
 ```shell
 docker-compose up -d
+```
+
+## Tailwind
+
+v4.2.1 Latest
+
+```shell
+npm run watch:css
 ```
