@@ -1,3 +1,8 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+default_language_version:
+  python: python3.12
+exclude: "node_modules|.venv|venv|.mypy_cache|.pytest_cache|__pycache__"
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.3.0
@@ -15,7 +20,7 @@ repos:
     rev: 7.3.0
     hooks:
       - id: flake8
-        args: [--ignore=E501]
+        args: [--ignore=E501, E203, W503]
 
   - repo: https://github.com/PyCQA/isort
     rev: 8.0.0
