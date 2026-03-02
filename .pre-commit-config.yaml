@@ -20,7 +20,7 @@ repos:
     rev: 7.3.0
     hooks:
       - id: flake8
-        args: [--ignore=E501, E203, W503]
+        args: ["--ignore=E501, E203, W503"]
 
   - repo: https://github.com/PyCQA/isort
     rev: 8.0.0
