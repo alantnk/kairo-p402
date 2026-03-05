@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Local apps
     "kanban.apps.KanbanConfig",
+    "account.apps.AccountConfig",
     # Third-party apps
     "django_htmx",
 ]
