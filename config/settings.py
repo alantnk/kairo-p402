@@ -24,6 +24,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Local apps
     "kanban.apps.KanbanConfig",
+    "account.apps.AccountConfig",
+    "main.apps.MainConfig",
     # Third-party apps
     "django_htmx",
 ]
@@ -56,6 +58,11 @@ TEMPLATES = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "account.authentication.EmailAuthBackend",
+]
+
 WSGI_APPLICATION = "config.wsgi.application"
 ASGI_APPLICATION = "config.asgi.application"
 
@@ -76,9 +83,6 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
@@ -86,7 +90,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Fortaleza"
 
 USE_I18N = True
 
@@ -97,3 +101,6 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [BASE_DIR / "jstools"]
+
+MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / "media"
