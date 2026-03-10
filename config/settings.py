@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     # Local apps
     "kanban.apps.KanbanConfig",
     "account.apps.AccountConfig",
+    "main.apps.MainConfig",
     # Third-party apps
     "django_htmx",
 ]
@@ -75,9 +76,6 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
