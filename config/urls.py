@@ -22,3 +22,7 @@ urlpatterns = [
     path("backend/", admin.site.urls),
     path("kanban/", include("kanban.urls")),
 ]
+
+admin.AdminSite.site_header = "Backend Site"
+admin.AdminSite.site_title = "🔐"
+admin.AdminSite.index_title = "Staff-Only Zone"
