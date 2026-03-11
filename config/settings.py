@@ -25,7 +25,8 @@ INSTALLED_APPS = [
     # Local apps
     "kanban.apps.KanbanConfig",
     "account.apps.AccountConfig",
-    "main.apps.MainConfig",
+    "frontend.apps.FrontendConfig",
+    "work_project.apps.WorkProjectConfig",
     # Third-party apps
     "django_htmx",
 ]
@@ -104,3 +105,7 @@ STATICFILES_DIRS = [BASE_DIR / "jstools"]
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
+LOGIN_REDIRECT_URL = "/work/"
+LOGOUT_REDIRECT_URL = "/session/login/"
+LOGIN_URL = "/session/login/"
