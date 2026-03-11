@@ -21,6 +21,7 @@ from django.urls import include, path
 urlpatterns = [
     path("backend/", admin.site.urls),
     path("kanban/", include("kanban.urls")),
+    path("session/", include("django.contrib.auth.urls")),
 ]
 
 admin.AdminSite.site_header = "Backend Site"
