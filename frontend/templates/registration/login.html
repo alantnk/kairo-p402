@@ -1,4 +1,4 @@
-{% extends "base_base.html" %}
+{% extends "base_login.html" %}
 
 {% block content %}
 
@@ -6,7 +6,17 @@
     <h2>Login</h2>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        {% for field in form %}
+        <div class="fieldWrapper">
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
+            {% if field.help_text %}
+              <p class="help" id="{{ field.auto_id }}_helptext">
+                {{ field.help_text|safe }}
+              </p>
+            {% endif %}
+        </div>
+      {% endfor %}
         <button type="submit">Login</button>
     </form>
 </div>

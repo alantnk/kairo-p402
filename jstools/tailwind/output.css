@@ -8,6 +8,7 @@
       "Courier New", monospace;
     --color-cyan-500: oklch(71.5% 0.143 215.221);
     --color-cyan-600: oklch(60.9% 0.126 221.723);
+    --color-sky-200: oklch(90.1% 0.058 230.902);
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-2xl: 42rem;
@@ -188,11 +189,17 @@
   .bg-cyan-500 {
     background-color: var(--color-cyan-500);
   }
+  .bg-sky-200 {
+    background-color: var(--color-sky-200);
+  }
   .bg-white {
     background-color: var(--color-white);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
+  }
+  .p-24 {
+    padding: calc(var(--spacing) * 24);
   }
   .hover\:bg-cyan-600 {
     &:hover {
@@ -201,4 +208,16 @@
       }
     }
   }
+}
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Crimson Pro", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  height: 100vh !important;
 }
