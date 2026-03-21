@@ -1,17 +1,15 @@
 {% extends "base_login.html" %}
-{% load static %}
 {% load widget_tweaks %}
-
 {% block content %}
-<div class="bg-white shadow-lg rounded-lg p-8 max-w-xs md:max-w-md w-full">
+<div>
     <div id="login-form">
-        <h2 class="text-xl md:text-2xl font-bold text-center text-gray-800 mb-6">Login</h2>
+        <h2>Login</h2>
         <form method="post">
             {% csrf_token %}
             {% if form.non_field_errors %}
-                  <div class="mb-4">
+                  <div>
                       {% for error in form.non_field_errors %}
-                          <p class="text-red-500 text-sm font-medium bg-red-50 p-2 rounded border border-red-200">
+                          <p>
                               {{ error }}
                           </p>
                       {% endfor %}
@@ -22,16 +20,16 @@
               {% render_field field placeholder=field.label class="w-full mb-6 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" %}
               {% if field.errors %}
                 {% for error in field.errors %}
-                    <span class="text-red-500 text-xs block mt-1">{{ error }}</span>
+                    <span>{{ error }}</span>
                 {% endfor %}
               {% endif %}
 
               {% if field.help_text %}
-                  <p class="mt-2 text-sm text-gray-500">{{ field.help_text|safe }}</p>
+                  <p>{{ field.help_text|safe }}</p>
               {% endif %}
             {% endfor %}
-            <button type="submit" class="w-full bg-sky-500 text-white py-2 md:py-3 rounded-lg font-semibold hover:bg-sky-600 transition duration-200">Entrar</button>
-            <p class="text-center text-gray-600 mt-6">
+            <button type="submit">Entrar</button>
+            <p>
                 <a href="#" class="text-sky-500 hover:underline" onclick="toggleForm('forgot-password-form')">
                     Esqueci minha senha
                 </a>
@@ -39,17 +37,17 @@
         </form>
     </div>
 
-    <div id="forgot-password-form" class="hidden">
-        <h2 class="text-xl md:text-2xl font-bold text-center text-gray-800 mb-6">Recuperar Senha</h2>
+    <div id="forgot-password-form" class="d-none">
+        <h2>Recuperar Senha</h2>
         <form>
-            <input type="email" placeholder="Email" class="w-full mb-6 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required />
-            <button type="submit" class="w-full bg-sky-500 text-white py-2 md:py-3 rounded-lg font-semibold hover:bg-sky-600 transition duration-200">
+            <input type="email" placeholder="Email" required />
+            <button type="submit" class="btn btn-primary">
                 Solicitar Nova Senha
             </button>
-            <p class="text-center text-gray-600 mt-6">
+            <p>
 
                 Lembrou sua senha?
-                <a href="#" class="text-sky-500 hover:underline" onclick="toggleForm('login-form')">Login</a>
+                <a href="#" onclick="toggleForm('login-form')">Login</a>
             </p>
         </form>
     </div>
