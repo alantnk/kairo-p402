@@ -5,8 +5,9 @@ Kairo centraliza metodologia e execução em um único ambiente digital.
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
+- [Docker](#docker)
+- [Tailwind](#tailwind)
+- [Celery](#celery)
 - [License](#license)
 
 ## Installation
@@ -17,10 +18,28 @@ Kairo centraliza metodologia e execução em um único ambiente digital.
 4. Set up the database.
 
 ```shell
-git clone [https://github.com/your-username/your-repo.git](https://github.com/your-username/your-repo.git)
-cd your-repo
-python -m venv venv
-source venv/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
+```
+
+## Docker
+
+Para instanciar os bancos do Postgres (Django) e Redis (Celery) em MODO DEV.
+
+```shell
+docker-compose up -d
+```
+
+## Tailwind
+
+v4.2.1 Latest
+
+```shell
+npm run watch:css
+```
+
+## Celery
+
+```shell
+celery -A config worker -l info
 ```

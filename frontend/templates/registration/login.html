@@ -1,0 +1,55 @@
+{% extends "base_login.html" %}
+{% load widget_tweaks %}
+{% block content %}
+<div>
+    <div id="login-form">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            {% if form.non_field_errors %}
+                  <div>
+                      {% for error in form.non_field_errors %}
+                          <p>
+                              {{ error }}
+                          </p>
+                      {% endfor %}
+                  </div>
+            {% endif %}
+            {% for field in form %}
+
+              {% render_field field placeholder=field.label class="w-full mb-6 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" %}
+              {% if field.errors %}
+                {% for error in field.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+              {% endif %}
+
+              {% if field.help_text %}
+                  <p>{{ field.help_text|safe }}</p>
+              {% endif %}
+            {% endfor %}
+            <button type="submit">Entrar</button>
+            <p>
+                <a href="#" class="text-sky-500 hover:underline" onclick="toggleForm('forgot-password-form')">
+                    Esqueci minha senha
+                </a>
+            </p>
+        </form>
+    </div>
+
+    <div id="forgot-password-form" class="d-none">
+        <h2>Recuperar Senha</h2>
+        <form>
+            <input type="email" placeholder="Email" required />
+            <button type="submit" class="btn btn-primary">
+                Solicitar Nova Senha
+            </button>
+            <p>
+
+                Lembrou sua senha?
+                <a href="#" onclick="toggleForm('login-form')">Login</a>
+            </p>
+        </form>
+    </div>
+</div>
+{% endblock content %}

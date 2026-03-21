@@ -1,0 +1,17 @@
+services:
+  database:
+    image: postgres:alpine3.22
+    container_name: postgres_db
+    environment:
+      POSTGRES_PASSWORD: a1mQ7_F0HT_1gIQI11jKi61LPiPjPTcc
+      POSTGRES_DB: p402db
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:8-bookworm
+    container_name: redis
+    ports:
+      - "6379:6379"
+    tty: true
+    stdin_open: true

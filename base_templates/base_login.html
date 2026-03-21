@@ -1,0 +1,22 @@
+{% load static %}
+
+{% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.8/dist/cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js" integrity="sha384-/TgkGk7p307TH7EXJDuUlgG3Ce1UVolAOFopFekQkkXihi5u/6OCvVKyz1W+idaz" crossorigin="anonymous"></script>
+
+  <title>Kairo - Login</title>
+</head>
+<body>
+  {% block content %}
+  {% endblock content %}
+  <script src="{% static 'js/login.js' %}"></script>
+</body>
+</html>

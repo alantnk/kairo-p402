@@ -1,0 +1,39 @@
+{% extends "base_base.html" %}
+
+{% block content %}
+
+
+<style>[data-trix-button-group="file-tools"] { display: none !important; }</style>
+<div>
+
+
+<div
+    x-data="{ value: '' }"
+    x-init="$refs.trix.editor.loadHTML(value)"
+    x-id="['trix']"
+
+    @trix-change="value = $refs.input.value"
+    @trix-file-accept.prevent
+>
+    <input :id="$id('trix')" type="hidden" x-ref="input">
+
+    <!-- Optional .prose class added to utilize Tailwind's Typography Plugin for styling -->
+    <trix-editor x-ref="trix" :input="$id('trix')"></trix-editor>
+</div>
+
+
+
+<button
+    class="bg-cyan-500 rounded-full p-4 mt-4 hover:bg-cyan-600"
+    hx-get="."
+    hx-trigger="click"
+    hx-target="#parent-div"
+    hx-swap="outerHTML">
+    Click Me!
+</button>
+
+<div id="parent-div"></div>
+
+</div>
+
+{% endblock content %}
