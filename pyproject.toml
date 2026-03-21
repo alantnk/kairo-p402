@@ -13,5 +13,14 @@ dependencies = [
     "django-widget-tweaks>=1.5.1",
     "pre-commit>=4.5.1",
     "psycopg2-binary>=2.9.11",
+    "pytest-django>=4.12.0",
+    "pytest-playwright>=0.7.2",
     "python-decouple>=3.8",
 ]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+
+python_files = "test.py tests.py test_*.py tests_*.py"
+
+addopts = "-s"
