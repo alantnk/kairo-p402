@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     "kanban.apps.KanbanConfig",
     "account.apps.AccountConfig",
     "frontend.apps.FrontendConfig",
-    "work_project.apps.WorkProjectConfig",
+    "workspace.apps.WorkspaceConfig",
     # Third-party apps
     "django_htmx",
     "widget_tweaks",
