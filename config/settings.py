@@ -23,10 +23,10 @@ INSTALLED_APPS = [
     "daphne",
     "django.contrib.staticfiles",
     # Local apps
-    "kanban.apps.KanbanConfig",
+    "apps.kanban.apps.KanbanConfig",
     "account.apps.AccountConfig",
     "frontend.apps.FrontendConfig",
-    "workspace.apps.WorkspaceConfig",
+    "apps.workspace.apps.WorkspaceConfig",
     # Third-party apps
     "django_htmx",
     "widget_tweaks",

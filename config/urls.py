@@ -26,8 +26,8 @@ urlpatterns = [
         "session/",
         include(("django.contrib.auth.urls", "auth"), namespace="session"),
     ),
-    path("work/", include("work_project.urls")),
-    path("kanban/", include("kanban.urls")),
+    path("work/", include("apps.workspace.urls")),
+    path("kanban/", include("apps.kanban.urls")),
 ]
 
 admin.AdminSite.site_header = "Backend Site"

@@ -1,6 +1,6 @@
 from django.urls import path
 
-from workspace.views import home_view
+from apps.workspace.views import home_view
 
 app_name = "workspace"
 
