@@ -23,13 +23,14 @@ INSTALLED_APPS = [
     "daphne",
     "django.contrib.staticfiles",
     # Local apps
-    "kanban.apps.KanbanConfig",
+    "apps.kanban.apps.KanbanConfig",
     "account.apps.AccountConfig",
     "frontend.apps.FrontendConfig",
-    "work_project.apps.WorkProjectConfig",
+    "apps.workspace.apps.WorkspaceConfig",
     # Third-party apps
     "django_htmx",
     "widget_tweaks",
+    "django_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -102,7 +103,7 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_DIRS = [BASE_DIR / "jstools"]
+# STATICFILES_DIRS = [BASE_DIR / "jstools"]
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"

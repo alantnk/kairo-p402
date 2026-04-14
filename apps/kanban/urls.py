@@ -1,6 +1,6 @@
 from django.urls import path
 
-from . import views as kanban_views
+from apps.kanban import views as kanban_views
 
 app_name = "kanban"
 

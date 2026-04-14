@@ -1,5 +1,5 @@
 function toggleForm(formType) {
-    document.getElementById('login-form').classList.add('hidden');
-    document.getElementById('forgot-password-form').classList.add('hidden');
-    document.getElementById(formType).classList.remove('hidden');
+    document.getElementById('login-form').classList.add('d-none');
+    document.getElementById('forgot-password-form').classList.add('d-none');
+    document.getElementById(formType).classList.remove('d-none');
 }
