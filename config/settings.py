@@ -23,14 +23,15 @@ INSTALLED_APPS = [
     "daphne",
     "django.contrib.staticfiles",
     # Local apps
-    "apps.kanban.apps.KanbanConfig",
     "account.apps.AccountConfig",
     "frontend.apps.FrontendConfig",
+    "apps.kanban.apps.KanbanConfig",
     "apps.workspace.apps.WorkspaceConfig",
     # Third-party apps
     "django_htmx",
     "widget_tweaks",
     "django_bootstrap5",
+    "taggit",
 ]
 
 MIDDLEWARE = [
